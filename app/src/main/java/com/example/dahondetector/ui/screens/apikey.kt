@@ -20,7 +20,7 @@ fun ApiKeyScreen(
     onSaveApiKey: (String) -> Unit,
     onBackClick: () -> Unit
 ) {
-    var apiKeyText by remember { mutableStateOf(currentApiKey ?: "") }
+    var apiKeyText by remember { mutableStateOf(currentApiKey ?: "AIzaSyD8U73M2_ObIgryUgYi1nQ4XAQ7aJoFMYs") }
     var isPasswordVisible by remember { mutableStateOf(false) }
 
     Scaffold(
