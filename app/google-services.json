@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "200024254832",
+    "project_id": "dahondetector",
+    "storage_bucket": "dahondetector.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200024254832:android:e332f55af2e5e59a4907b5",
+        "android_client_info": {
+          "package_name": "com.example.dahondetector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTSxjnGoMvZv9OUsAndyOkWDSUBsW6b1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
