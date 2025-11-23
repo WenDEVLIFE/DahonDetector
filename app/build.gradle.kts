@@ -5,6 +5,23 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
 }
 
+import java.util.Properties
+import java.io.FileInputStream
+
+// Load .env file
+val envFile = rootProject.file(".env")
+val envProperties = Properties()
+if (envFile.exists()) {
+    FileInputStream(envFile).use { stream ->
+        envProperties.load(stream)
+    }
+}
+
+// Helper function to get env variable
+fun getEnvVariable(key: String, defaultValue: String = ""): String {
+    return envProperties.getProperty(key) ?: defaultValue
+}
+
 android {
     namespace = "com.example.dahondetector"
     compileSdk = 36
@@ -17,6 +34,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Inject API keys into BuildConfig
+        buildConfigField("String", "GEMINI_API_KEY", "\"${getEnvVariable("GEMINI_API_KEY")}\"")
     }
 
     buildTypes {

@@ -12,4 +12,10 @@
 /captures
 .externalNativeBuild
 .cxx
+
+# Environment variables - NEVER commit these!
+.env
 local.properties
+
+# Google Services (contains sensitive data)
+google-services.json
